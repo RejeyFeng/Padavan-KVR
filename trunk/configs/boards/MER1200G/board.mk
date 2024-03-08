@@ -4,5 +4,5 @@
 # MER1200G  # MERCURY MER1200G    # MT7620  #
 ##################################################################
 
-CFLAGS += -DBOARD_MER1200G -DVENDOR_MERCURY
+CFLAGS += -DBOARD_MER1200G
 BOARD_NUM_USB_PORTS=0
