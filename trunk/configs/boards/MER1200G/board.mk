@@ -5,4 +5,4 @@
 ##################################################################
 
 CFLAGS += -DBOARD_MER1200G -DVENDOR_MERCURY
-BOARD_NUM_USB_PORTS=1
+BOARD_NUM_USB_PORTS=0
