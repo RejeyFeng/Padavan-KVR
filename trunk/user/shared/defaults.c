@@ -1052,7 +1052,7 @@ struct nvram_pair router_defaults[] = {
 	{ "ether_jumbo", "0" },
 #endif
 #if (BOARD_NUM_ETH_LEDS > 1)
-	{ "ether_led0", "3" },
+	{ "ether_led0", "0" },
 #else
 	{ "ether_led0", "7" },
 #endif
