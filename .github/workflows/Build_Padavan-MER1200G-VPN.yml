@@ -44,8 +44,6 @@ jobs:
         #因不同型号配置功能不一样，所以先把配置项删除，如果你自己要添加其他的，也要写上删除这一条，切记！！！
         ################################################################################################
         sed -i 's/CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT=y/CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT=n/g' .config
-        sed -i 's/CONFIG_FIRMWARE_INCLUDE_SRELAY=y/CONFIG_FIRMWARE_INCLUDE_SRELAY=n/g' .config
-        sed -i 's/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE=n/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE=y/g' .config
         
         sed -i '/CONFIG_FIRMWARE_INCLUDE_TRANSMISSION/d' .config 
         sed -i '/CONFIG_FIRMWARE_INCLUDE_TRANSMISSION_WEB_CONTROL/d' .config
@@ -70,13 +68,13 @@ jobs:
         #以下选项是定义你需要的功能（y=集成,n=忽略），重新写入到.config文件
         ######################################################################
         ##内网穿透
-        echo "CONFIG_FIRMWARE_INCLUDE_NPC=y" >> .config 
+        #echo "CONFIG_FIRMWARE_INCLUDE_NPC=n" >> .config 
         echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=y" >> .config #zerotier ~1.3M
-        echo "CONFIG_FIRMWARE_INCLUDE_FRPC=y" >> .config  #frpc
+        #echo "CONFIG_FIRMWARE_INCLUDE_FRPC=n" >> .config  #frpc
         echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=y" >> .config #aliddns
         ##科学上网##
-        echo "CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS=y" >> .config
-        #echo "CONFIG_FIRMWARE_INCLUDE_V2RAY=n" >> .config #mini太小，内置不进
+        #echo "CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS=n" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_V2RAY=y" >> .config #mini太小，内置不进
         #echo "CONFIG_FIRMWARE_INCLUDE_XRAY=n" >> .config #mini太小，内置不进
         #echo "CONFIG_FIRMWARE_INCLUDE_TROJAN=n" >> .config #mini太小，内置不进
         #echo "CONFIG_FIRMWARE_INCLUDE_SSOBFS=n" >> .config 
